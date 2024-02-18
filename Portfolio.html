@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Arantxa's Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='Style.css'>
+    <link rel="shortcut icon" href="Imagenes/Logo_3D.png" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="Imagenes/Logo_3D.png" alt="Logo 3D del Portfolio" class="logo">
+                <div class="menu-icon"> <img src="Imagenes/menu-icon.png" alt="menu"></div>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Aboutme">About Me</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>     
+    </header>
+    
+    <div class="grid-container">
+
+        <div class="grid-item">
+            <div class="home" id="Home">
+                <img src="Imagenes/Img-home.gif" alt="Imagen principal del home">
+            </div>
+            
+        </div>
+
+        <div class="grid-item">
+            <div class="about-me" id="Aboutme">
+                <div class="bento-grid-1">
+                    <p><span>Hi,</span> I'm <span>Arantxa.</span></p>
+                    <p>I'm a 20 years old <span>web developer</span></p>
+                    <p>I love <span>design, animation and video games</span>. I consider myself creative and constant with my work.</p>
+                    <div class="langcont">
+                        <img src="Imagenes/html-5.png" alt="html">
+                        <img src="Imagenes/css-3.png" alt="css">
+                        <img src="Imagenes/c-.png" alt="c#">
+                        <img src="Imagenes/java.png" alt="java">
+                    </div>
+                </div>
+                <div class="bento-grid-2"><p>ABOUT ME</p></div>
+                <div class="bento-grid-3"></div>
+                <div class="bento-grid-4">ARAN*******TXA</div>
+                <div class="bento-grid-5"> <img src="Imagenes/Logo_3D.png" alt="Logo"></div>
+                <div class="bento-grid-6">
+                    <img src="Imagenes/bitmoji.jpeg" alt="">
+                    <div class="text-bento6">
+                        <p><span>Welcome,</span></p>
+                        <p>If you want to know more about me do not hesitate to contact me from the form below or for my social media</p>
+                    </div>
+                    <div class="socialmedia">
+                        <img src="Imagenes/github.png" alt="github" class="sm">
+                        <img src="Imagenes/linkedin.png" alt="linkedin" class="sm">
+                        <img src="Imagenes/instagram (1).png" alt="instagram" class="sm">
+                        <img src="Imagenes/x.png" alt="x" class="sm">
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="projects-container" id="Projects">
+                 <h2>Projects</h2>
+                 <div class="project-list">
+                    <div class="card">
+                        <div class="card-content">
+                          <h2>Dronetech</h2>
+                          <p>Drone Company</p>
+                          <div class="content-lang">
+                                <div>HTML</div>
+                                <div>CSS</div>
+                          </div>  
+                        </div>
+                        <img src="Imagenes/dronproj.png" alt="Dronetech">
+                      </div>
+                      
+                      <div class="card 2">
+                        <div class="card-content">
+                          <h2>Google</h2>
+                          <p>Google Layout</p>
+                          <div class="content-lang">
+                                <div>HTML</div>
+                                <div>CSS</div>
+                          </div>  
+                        </div>
+                        <img src="Imagenes/googleproj.png" alt="Google">
+                      </div>
+                      
+                      <div class="card 3">
+                        <div class="card-content">
+                          <h2>YouTube</h2>
+                          <p>YouTube Layout</p>
+                          <div class="content-lang">
+                                <div>HTML</div>
+                                <div>CSS</div>
+                          </div>  
+                        </div>
+                        <img src="Imagenes/youtubeproj.png" alt="YouTube">
+                      </div>
+                 </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="contact" id="Contact">
+                <h2>Contact</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group"><textarea id="message" name="message" required placeholder="message..."></textarea></div>
+                    <div class="form-group"><button type="submit" class="btn">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

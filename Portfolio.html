@@ -7,19 +7,25 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='Style.css'>
     <link rel="shortcut icon" href="Imagenes/Logo_3D.png" type="image/x-icon"> 
+    <script src="main.js" defer ></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
                 <img src="Imagenes/Logo_3D.png" alt="Logo 3D del Portfolio" class="logo">
-                <div class="menu-icon"> <img src="Imagenes/menu-icon.png" alt="menu"></div>
+                <div class="menu-right">
+                    <div class="menu-icon"> <img src="Imagenes/menu-icon.png" alt="menu"></div>
                 <ul>
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#Aboutme">About Me</a></li>
                     <li><a href="#Projects">Projects</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
+                <input type="checkbox" class="theme-checkbox">
+
+                </div>
+                
             </div>
         </nav>     
     </header>
@@ -28,7 +34,8 @@
 
         <div class="grid-item">
             <div class="home" id="Home">
-                <img src="Imagenes/Img-home.gif" alt="Imagen principal del home">
+                <img src="Imagenes/FondoPortLight.png" alt="Imagen principal del home modo claro" class="fondoLight">
+                <img src="Imagenes/FondoPortDark.png" alt="Imagen principal del home modo oscuro" class="fondoDark">
             </div>
             
         </div>
@@ -66,52 +73,77 @@
     
             </div>
         </div>
-        <div class="grid-item">
-            <div class="projects-container" id="Projects">
-                 <h2>Projects</h2>
-                 <div class="project-list">
-                    <div class="card">
-                        <div class="card-content">
-                          <h2>Dronetech</h2>
-                          <p>Drone Company</p>
-                          <div class="content-lang">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                          </div>  
+        <div class="grid-item projects-grid">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-list" id="project-list">
+                    <div class="project-row" id="row">
+                        <div class="project item" onclick="cargar(this)">
+                            <div class="projectTitle">
+                                <h2>YouTube</h2>
+                                <img src="Imagenes/youtubeproj.png" alt="proyectoYT" class="projectImg">
+                                <div class="lang">
+                                    <img src="Imagenes/css-3.png" alt="css">
+                                    <img src="Imagenes/html-5.png" alt="html">
+                                </div>
+                            </div>
                         </div>
-                        <img src="Imagenes/dronproj.png" alt="Dronetech">
-                      </div>
-                      
-                      <div class="card 2">
-                        <div class="card-content">
-                          <h2>Google</h2>
-                          <p>Google Layout</p>
-                          <div class="content-lang">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                          </div>  
+                        <div class="project item" onclick="cargar(this)">
+                            <div class="projectTitle">
+                                <h2>Google</h2>
+                                <img src="Imagenes/googleproj.png" alt="googleproj"class="projectImg">
+                                <div class="lang">
+                                    <img src="Imagenes/css-3.png" alt="css">
+                                    <img src="Imagenes/html-5.png" alt="html">
+                                </div>
+                            </div>
                         </div>
-                        <img src="Imagenes/googleproj.png" alt="Google">
-                      </div>
-                      
-                      <div class="card 3">
-                        <div class="card-content">
-                          <h2>YouTube</h2>
-                          <p>YouTube Layout</p>
-                          <div class="content-lang">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                          </div>  
+                        <div class="project item" onclick="cargar(this)">
+                            <div class="projectTitle">
+                                <h2>DroneTech</h2>
+                                <img src="Imagenes/dronoTechProj2.png" alt="dronoTechProj2" class="projectImg">
+                                <div class="lang">
+                                    <img src="Imagenes/css-3.png" alt="css">
+                                    <img src="Imagenes/html-5.png" alt="html">
+                                    <img src="Imagenes/js.png" alt="js">
+                                </div>
+                            </div>
                         </div>
-                        <img src="Imagenes/youtubeproj.png" alt="YouTube">
-                      </div>
-                 </div>
+                        <div class="project item" onclick="cargar(this)">
+                            <div class="projectTitle">
+                                <h2>Calculadora</h2>
+                                <img src="Imagenes/calculadoraProj.png" alt="calculadoraProj"class="projectImg">
+                                <div class="lang">
+                                    <img src="Imagenes/css-3.png" alt="css">
+                                    <img src="Imagenes/html-5.png" alt="html">
+                                    <img src="Imagenes/js.png" alt="js">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="seleccion" id="seleccion">
+                    <div class="cerrar" onclick="cerrar()">
+                        &#x2715;
+                    </div>
+                    <div class="project-info">
+                        <div class="projectTitle" id="content">
+                            <h2 id="titulo">YouTube</h2>
+                            <img src="Imagenes/youtubeproj.png" alt="proyectoYT" id="projectImg">
+                            <div class="lang" id="lenguajes">
+                                <img src="Imagenes/css-3.png" alt="css">
+                                <img src="Imagenes/html-5.png" alt="html">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <div class="grid-item">
             <div class="contact" id="Contact">
                 <h2>Contact</h2>
-                <form action="#" method="post">
+                <form action="main.php" method="post" onsubmit="return validateForm()">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
